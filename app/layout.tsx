@@ -32,7 +32,7 @@ export default async function RootLayout({
       </head>
       <body
         className={cn(
-          "flex flex-col min-h-screen noise",
+          "flex flex-col min-h-screen",
           manrope.variable,
           garamond.variable
         )}
