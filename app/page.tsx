@@ -1,15 +1,14 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 
 export default async function Home() {
   return (
-    <div className="flex-1 w-full flex flex-col gap-20 items-center justify-center">
-      <Card>
-        <CardHeader className="font-bold text-xl">Web Starter</CardHeader>
-        <CardContent>
-          A template for web projects with Next.js 14, Tailwind CSS, Supabase &
-          Shadcn UI.
-        </CardContent>
-      </Card>
+    <div className="flex-1 w-full flex flex-col gap-4 items-center justify-center">
+      <h1 className="font-logo font-black text-5xl">Principles</h1>
+      <p className="text-xl">Better decision making.</p>
+      <Input
+        placeholder="What do you need to decide?"
+        className="w-1/2 max-w-xl"
+      />
     </div>
   );
 }

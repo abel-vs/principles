@@ -3,11 +3,9 @@ import { Toaster } from "sonner";
 import { Providers } from "@/lib/providers/providers";
 import { cn } from "@/lib/utils";
 import { createClient } from "@/utils/supabase/server";
-import { Manrope } from "next/font/google";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import Script from "next/script";
-
-const font = Manrope({ subsets: ["latin"] });
+import { garamond, manrope } from "@/lib/fonts";
 
 const defaultUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
@@ -28,11 +26,17 @@ export default async function RootLayout({
   } = await supabase.auth.getSession();
 
   return (
-    <html lang="en" className={font.className}>
+    <html lang="en" className={manrope.className}>
       <head>
         <Script src="https://cdn.tolt.io/tolt.js" data-tolt="TOLT-KEY" />
       </head>
-      <body className={cn("flex flex-col bg-background min-h-screen")}>
+      <body
+        className={cn(
+          "flex flex-col min-h-screen noise",
+          manrope.variable,
+          garamond.variable
+        )}
+      >
         <Toaster />
         <Providers
           session={session}
