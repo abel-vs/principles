@@ -1,15 +1,26 @@
 export const Footer = () => {
   return (
-    <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
+    <footer className="w-full p-8 flex justify-between text-center text-xs">
       <p>
-        Made with 🦤 by{" "}
+        Made by{" "}
         <a
-          href="https://abelvansteenweghen.com"
+          href="https://abel.so"
           target="_blank"
           className="font-bold hover:underline"
           rel="noreferrer"
         >
           Abel
+        </a>
+      </p>
+      <p>
+        Inspired by{" "}
+        <a
+          href="https://principles.com"
+          target="_blank"
+          className="font-bold hover:underline"
+          rel="noreferrer"
+        >
+          Ray Dalio
         </a>
       </p>
     </footer>
